@@ -1,6 +1,6 @@
 %define name	python-medusa
 %define version 0.5.4
-%define release 2mdk
+%define release %mkrel 2
 
 Name: 	 	%{name}
 Summary: 	Framework for python-based server
