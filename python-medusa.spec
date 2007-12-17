@@ -11,7 +11,6 @@ Source:		medusa-%{version}.tar.bz2
 URL:		http://www.amk.ca/python/code/medusa.html
 License:	BSD
 Group:		System/Servers
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
 BuildRequires:	python-devel
 
