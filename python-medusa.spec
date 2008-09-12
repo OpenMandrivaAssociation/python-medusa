@@ -1,18 +1,16 @@
-%define name	python-medusa
-%define version 0.5.4
-%define release %mkrel 4
+%define oname	medusa
 
-Name: 	 	%{name}
-Summary: 	Framework for python-based server
-Version: 	%{version}
-Release: 	%{release}
-
-Source:		medusa-%{version}.tar.bz2
+Name: 	 	python-%{oname}
+Summary: 	Framework for Python-based server
+Version: 	0.5.4
+Release: 	%{mkrel 3}
+Source0:	http://www.amk.ca/files/python/%{oname}-%{version}.tar.bz2
 URL:		http://www.amk.ca/python/code/medusa.html
 License:	BSD
 Group:		System/Servers
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
+%{py_requires}
 BuildRequires:	python-devel
 
 %description
@@ -28,17 +26,18 @@ and enables some new persistence capabilities that are otherwise
 difficult or impossible to implement.
 
 %prep
-%setup -q -n medusa-%version
+%setup -q -n %{oname}-%{version}
 
 %install
-rm -rf $RPM_BUILD_ROOT
-python setup.py install --root=$RPM_BUILD_ROOT
+rm -rf %{buildroot}
+python setup.py install --root=%{buildroot} --compile --optimize=2
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc *.txt demo docs test
-%_libdir/python2*/site-packages/medusa
+%{py_puresitedir}/%{oname}
+%{py_puresitedir}/%{oname}-%{version}-py%{pyver}.egg-info
 
