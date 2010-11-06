@@ -3,7 +3,7 @@
 Name: 	 	python-%{oname}
 Summary: 	Framework for Python-based server
 Version: 	0.5.4
-Release: 	%mkrel 5
+Release: 	%mkrel 6
 Source0:	http://www.amk.ca/files/python/%{oname}-%{version}.tar.bz2
 URL:		http://www.amk.ca/python/code/medusa.html
 License:	BSD
