@@ -6,7 +6,7 @@ Summary: 	Framework for Python-based server
 Version: 	0.5.4
 Release: 	9
 Source0:	http://www.amk.ca/files/python/%{oname}-%{version}.tar.bz2
-URL:		http://www.amk.ca/python/code/medusa.html
+URL:		https://www.amk.ca/python/code/medusa.html
 License:	BSD
 Group:		System/Servers
 BuildArch:	noarch
